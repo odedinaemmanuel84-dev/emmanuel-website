@@ -1,33 +1,48 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header class="nav">
-  <div class="container">
-    <h2 class="logo">Emmanuel</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Work</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<nav class="navbar">
+<h2 class="logo">Emmanuel</h2>
+<div class="menu-toggle">☰</div>
 
-<section class="section">
-  <h1>Contact Me</h1>
-  <p>Let’s work together</p>
-  <a href="https://wa.me/+2349035614658" class="btn">Chat on WhatsApp</a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="work.html">Work</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<section class="contact">
+<h1>Contact Me</h1>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<br>
+
+<a href="https://wa.me/+2349035614658" class="btn">Chat on WhatsApp</a>
 </section>
 
-<footer>©️ 2026 Emmanuel</footer>
+<footer>
+<p>©️ 2026 Emmanuel</p>
+</footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
-
