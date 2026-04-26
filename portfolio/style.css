@@ -358,4 +358,22 @@ footer p:last-child {
     .subtitle { 
         font-size: 1.5rem; 
     }
+
+    /* Logo Styling */
+.logo {
+    font-size: 1.95rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+    color: #f8fafc;
+    transition: all 0.3s;
+}
+
+.logo:hover {
+    color: #14b8a6;
+}
+
+.logo span {
+    color: #14b8a6;
+    font-weight: 700;
 }
