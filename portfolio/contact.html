@@ -9,16 +9,32 @@
 </head>
 <body>
     <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">EO<span>Concept</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
 
     <section class="contact-section">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p>I'm currently available for new projects. Fill the form or send me an email.</p>
+            <p>I'm currently available for new projects. Let's discuss how I can help bring your vision to life.</p>
             
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Tell me about your project..." required></textarea>
+            <!-- Formspree Form - Replace YOUR_FORM_ID_HERE -->
+            <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="6" placeholder="Tell me about your project..." required></textarea>
                 <button type="submit" class="btn primary">Send Message</button>
             </form>
             
