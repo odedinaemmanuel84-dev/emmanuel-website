@@ -451,3 +451,67 @@ footer p:last-child {
 .cta-text a:hover {
     text-decoration: underline;
 }
+
+    /* Professional About Page */
+.about-section {
+    padding: 120px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: #1c2536;
+    padding: 2.5rem;
+    border-radius: 18px;
+    border: 1px solid #334155;
+    transition: all 0.4s ease;
+}
+
+.about-card:hover {
+    border-color: #14b8a6;
+    transform: translateY(-8px);
+}
+
+.about-card h3 {
+    color: #f8fafc;
+    margin-bottom: 1.4rem;
+    font-size: 1.55rem;
+}
+
+.about-card p {
+    line-height: 1.8;
+    opacity: 0.95;
+    font-size: 1.08rem;
+}
+
+/* Skills Card */
+.skills-card {
+    padding: 2.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.skill-item {
+    background: #0a0f1c;
+    padding: 14px 16px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    color: #cbd5e1;
+    border: 1px solid #334155;
+    transition: all 0.3s;
+}
+
+.skill-item:hover {
+    background: #14b8a6;
+    color: #0a0f1c;
+    border-color: #14b8a6;
+}
