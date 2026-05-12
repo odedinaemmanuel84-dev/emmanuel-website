@@ -1,9 +1,3 @@
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-
-  if(window.scrollY > 50) {
-    header.style.background = '#050816';
-  } else {
-    header.style.background = 'rgba(0,0,0,0.5)';
-  }
+particlesJS("particles-js",{
+particles:{number:{value:80},color:{value:"#00ffff"},size:{value:3},move:{speed:2}}
 });
