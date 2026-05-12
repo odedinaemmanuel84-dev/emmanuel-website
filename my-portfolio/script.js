@@ -1,10 +1,13 @@
-// 1. Lines and Dots Particles
+// 1. Interactive Background Dots & Lines
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 let particles = [];
+
+function initCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
 class Particle {
     constructor() {
         this.x = Math.random() * canvas.width;
@@ -22,15 +25,17 @@ class Particle {
         if (this.y < 0) this.y = canvas.height;
     }
     draw() {
-        ctx.fillStyle = 'rgba(255,255,255,0.5)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.2)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
     }
 }
 
-function init() {
-    for (let i = 0; i < 100; i++) particles.push(new Particle());
+function createParticles() {
+    for (let i = 0; i < 80; i++) {
+        particles.push(new Particle());
+    }
 }
 
 function animate() {
@@ -41,18 +46,27 @@ function animate() {
     });
     requestAnimationFrame(animate);
 }
-init();
-animate();
 
-// 2. Scroll Reveal Logic
+// 2. Intersection Observer for Scroll Animations
+const observerOptions = { threshold: 0.2 };
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Alternate left and right
-            entry.target.classList.add('active');
-            entry.target.classList.add(index % 2 === 0 ? 'from-left' : 'from-right');
+            entry.target.classList.add('show-active');
+        } else {
+            // Remove the class to trigger the animation again when scrolling back up
+            entry.target.classList.remove('show-active');
         }
     });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    initCanvas();
+    createParticles();
+    animate();
+    
+    const animatedElements = document.querySelectorAll('.animate-left, .animate-right');
+    animatedElements.forEach(el => observer.observe(el));
 });
 
-document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+window.addEventListener('resize', initCanvas);
