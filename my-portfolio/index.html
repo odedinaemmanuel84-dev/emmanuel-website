@@ -1,49 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Elite Portfolio</title>
-<link rel="stylesheet" href="css/style.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emmanuel | Web Developer</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
+
 <body>
 
-<div id="particles-js"></div>
-<a href="https://wa.me/234XXXXXXXXXX" class="whatsapp">💬</a>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
-<header>
-<nav class="navbar">
-<div class="logo">EMMANUEL.</div>
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="projects.html">Projects</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-</nav>
-</header>
+  <!-- Custom Cursor -->
+  <div class="cursor"></div>
 
-<section class="hero">
-<div>
-<h1 class="glow">I Build Premium Websites</h1>
-<p>Modern UI/UX developer creating high-end digital experiences.</p>
-<a href="projects.html" class="btn">View Projects</a>
-</div>
-<img src="images/profile.png" class="hero-img">
-</section>
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
 
-<section class="section">
-<h2 class="section-title">Pricing Plans</h2>
-<div class="grid">
-<div class="card"><h3>Starter</h3><p>$20</p></div>
-<div class="card highlight"><h3>Basic</h3><p>$50</p></div>
-<div class="card"><h3>Pro</h3><p>$120</p></div>
-</div>
-</section>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">Emmanuel.</h1>
 
-<script src="js/script.js"></script>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <button id="theme-toggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+
+    <div class="hero-content glass">
+
+      <h3>Hello, I'm</h3>
+
+      <h1>Emmanuel Odedina</h1>
+
+      <h2>
+        <span class="typing"></span>
+      </h2>
+
+      <p>
+        Professional Frontend Developer creating premium websites
+        with advanced UI/UX and modern animations.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="projects.html" class="btn neon">
+          View Projects
+        </a>
+
+        <a href="contact.html" class="btn">
+          Hire Me
+        </a>
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="profile">
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="footer-content">
+
+      <h2>Emmanuel.</h2>
+
+      <p>
+        Building modern experiences for the web.
+      </p>
+
+      <div class="socials">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+
+      <p class="copyright">
+        © 2026 Emmanuel. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="js/script.js"></script>
+
 </body>
-</html>
+  </html>
