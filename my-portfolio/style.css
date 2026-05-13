@@ -109,6 +109,7 @@ header{
   display:none;
 }
 
+/* FIXED HOME LAYOUT */
 .home{
   width:100%;
   min-height:100vh;
@@ -118,10 +119,12 @@ header{
   align-items:center;
   gap:60px;
   position:relative;
+  flex-wrap:wrap;
 }
 
 .home-content{
   flex:1;
+  min-width:0;
 }
 
 .home-content h1{
@@ -198,6 +201,9 @@ header{
 
 .hero-image{
   flex:1;
+  min-width:0;
+  display:flex;
+  justify-content:center;
 }
 
 .hero-image img{
@@ -364,7 +370,6 @@ header{
   border-radius:25px;
   transition:.4s;
 }
-
 
 .service-card i{
   font-size:3rem;
@@ -656,9 +661,11 @@ footer{
   }
 
   .hero-photo-card{
-  max-width:320px;
+    max-width:320px;
   }
 
   .logo img{
-  width:150px;
+    width:150px;
   }
+
+} /* ✅ FIXED: closing bracket added here */
