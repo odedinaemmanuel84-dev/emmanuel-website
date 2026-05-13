@@ -371,10 +371,41 @@ header{
   transition:.4s;
 }
 
-.service-card i{
-  font-size:3rem;
-  color:var(--main);
-  margin-bottom:20px;
+.service-card{
+  overflow:hidden;
+  padding:0;
+  transition:.4s;
+}
+
+.service-img{
+  width:100%;
+  height:220px;
+  overflow:hidden;
+}
+
+.service-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.service-card:hover .service-img img{
+  transform:scale(1.08);
+}
+
+.service-content{
+  padding:25px;
+}
+
+.service-content h3{
+  margin-bottom:15px;
+  font-size:1.4rem;
+}
+
+.service-content p{
+  opacity:.8;
+  line-height:1.7;
 }
 
 .service-card:hover,
