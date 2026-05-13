@@ -6,10 +6,21 @@ window.addEventListener("load", () => {
 // Mobile Menu
 const menuBtn = document.querySelector(".menu-btn");
 const navbar = document.querySelector(".navbar");
+const navLinks = document.querySelectorAll(".navbar a");
 
+// Open Menu
 menuBtn.onclick = () => {
   navbar.classList.toggle("active");
 };
+
+// Close Menu Automatically After Clicking Link
+navLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+  });
+
+});
 
 // Typing Effect
 const typing = document.querySelector(".typing");
