@@ -86,21 +86,9 @@ header{
   transform:scale(1.05);
 }
 
-body {
-  background: #0a0a0a;
-}
-
 .navbar{
   display:flex;
   gap:30px;
-}
-
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: cyan;
-  text-shadow: 0 0 10px cyan, 0 0 20px cyan;
-  cursor: pointer;
 }
 
 .navbar a{
