@@ -140,3 +140,37 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth,window.innerHeight);
 
 });
+
+// Contact Form Success Message
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.querySelector(".form-message");
+
+contactForm.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  const response = await fetch(contactForm.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json"
+    }
+  });
+
+  if(response.ok){
+
+    formMessage.innerHTML =
+    "✅ Message sent successfully!";
+
+    contactForm.reset();
+
+  }else{
+
+    formMessage.innerHTML =
+    "❌ Something went wrong. Try again.";
+
+  }
+
+});
