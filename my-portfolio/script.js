@@ -77,14 +77,6 @@ themeToggle.onclick = () => {
   document.body.classList.toggle("light-mode");
 };
 
-// Custom Cursor
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", e => {
-  cursor.style.left = e.clientX + "px";
-  cursor.style.top = e.clientY + "px";
-});
-
 // Three.js Background
 const scene = new THREE.Scene();
 
