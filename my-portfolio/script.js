@@ -173,8 +173,6 @@ contactForm.addEventListener("submit", async (e) => {
 
   }
 
-});
-
 // Auto Clear Form After Submit
 
 const contactForm = document.getElementById("contact-form");
