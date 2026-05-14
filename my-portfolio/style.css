@@ -707,6 +707,22 @@ footer{
     gap:40px;
   }
 
+.contact-container{
+  grid-template-columns:1fr;
+}
+
+.contact-info{
+  text-align:left;
+}
+
+.contact-info .socials{
+  justify-content:center;
+}
+
+.contact-form{
+  width:100%;
+}
+  
   .hero-btns{
     justify-content:center;
     flex-wrap:wrap;
