@@ -174,3 +174,35 @@ contactForm.addEventListener("submit", async (e) => {
   }
 
 });
+
+// Auto Clear Form After Submit
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", async function(e){
+
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  const response = await fetch(contactForm.action,{
+    method:"POST",
+    body:formData,
+    headers:{
+      'Accept':'application/json'
+    }
+  });
+
+  if(response.ok){
+
+    alert("Message sent successfully!");
+
+    contactForm.reset();
+
+  }else{
+
+    alert("Something went wrong!");
+
+  }
+
+});
