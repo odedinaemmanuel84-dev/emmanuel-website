@@ -514,6 +514,58 @@ header{
   color:#fff;
 }
 
+.contact-container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+  align-items:center;
+  justify-content:center;
+}
+
+.contact-info{
+  width:100%;
+}
+
+.contact-info .socials{
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  margin-top:30px;
+}
+
+.contact-form{
+  width:100%;
+  max-width:100%;
+  margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+}
+
+.contact-form textarea{
+  min-height:160px;
+  resize:none;
+}
+
+.contact-form button{
+  width:100%;
+}
+
+.contact-info p{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:18px 0;
+  font-size:1.1rem;
+  flex-wrap:wrap;
+}
+
+.contact-info h3{
+  margin-bottom:25px;
+  font-size:2rem;
+}
+
 .form-message{
   margin-top:15px;
   font-size:.95rem;
@@ -699,4 +751,50 @@ footer{
     width:150px;
   }
 
-} /* ✅ FIXED: closing bracket added here */
+/* WhatsApp Floating Button */
+.whatsapp-float{
+  position:fixed;
+  bottom:25px;
+  right:20px;
+  width:65px;
+  height:65px;
+  background:#25d366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:2rem;
+  text-decoration:none;
+  z-index:9999;
+
+  box-shadow:
+  0 0 10px rgba(37,211,102,.5),
+  0 0 25px rgba(37,211,102,.4);
+
+  animation:whatsappPulse 2s infinite;
+  transition:.4s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
+  box-shadow:
+  0 0 20px rgba(37,211,102,.7),
+  0 0 40px rgba(37,211,102,.6);
+}
+
+@keyframes whatsappPulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
